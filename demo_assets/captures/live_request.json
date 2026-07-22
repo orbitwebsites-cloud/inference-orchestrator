@@ -1,0 +1,39 @@
+{
+  "prompt": "Explain the CAP theorem to a junior engineer.",
+  "estimatedTokens": 268,
+  "chosenEndpointId": "local-llama3-8b",
+  "chosenEndpointLabel": "Local: Llama 3.1 8B (Ollama)",
+  "weights": {
+    "cost": 0.4,
+    "latency": 0.3,
+    "quality": 0.3
+  },
+  "constraints": {
+    "minQuality": 0.8
+  },
+  "candidates": [
+    {
+      "id": "local-llama3-8b",
+      "composite": 0.7,
+      "costScore": 1,
+      "latencyScore": 1,
+      "qualityScore": 0,
+      "expectedLatencyMs": 776
+    },
+    {
+      "id": "sim-cloud-premium",
+      "composite": 0.3,
+      "costScore": 0,
+      "latencyScore": 0,
+      "qualityScore": 1,
+      "expectedLatencyMs": 1245
+    }
+  ],
+  "estimatedCostUsd": 0,
+  "baselineEndpointId": "sim-cloud-premium",
+  "baselineCostUsd": 0.00268,
+  "savingsUsd": 0.00268,
+  "actualLatencyMs": 62,
+  "usedRealOllama": false,
+  "responseText": "[simulated local-llama3-8b response to 45-char prompt]"
+}

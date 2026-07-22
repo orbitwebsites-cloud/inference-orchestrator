@@ -1,0 +1,3 @@
+inference-orchestrator router listening on http://localhost:8787
+POST /route   { "prompt": "...", "maxLatencyMs": 500, "minQuality": 0.7 }
+GET  /endpoints

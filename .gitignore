@@ -3,3 +3,13 @@ logs/*.jsonl
 logs/*.json
 !logs/.gitkeep
 .env
+
+# DEMO_VIDEO.mp4 and its generated build artifacts are intentionally not
+# committed (large binaries). Regenerate with:
+#   python demo_assets/narration.py
+#   python demo_assets/render_frames.py
+#   python demo_assets/build_video.py
+DEMO_VIDEO.mp4
+demo_assets/build/
+demo_assets/frames/*.png
+demo_assets/narration/*.wav

@@ -1,0 +1,5 @@
+local-tinyllama      | kind: local           | cost/1M tok: $0.00     | latency: ~150ms  | quality: 0.55
+local-phi3-mini      | kind: local           | cost/1M tok: $0.00     | latency: ~400ms  | quality: 0.72
+local-llama3-8b      | kind: local           | cost/1M tok: $0.00     | latency: ~900ms  | quality: 0.85
+sim-cloud-fast       | kind: simulated-cloud | cost/1M tok: $0.20     | latency: ~300ms  | quality: 0.75
+sim-cloud-premium    | kind: simulated-cloud | cost/1M tok: $10.00    | latency: ~1200ms | quality: 0.95

@@ -1,0 +1,37 @@
+
+> inference-orchestrator@0.1.0 demo
+> node src/demo.js
+
+Running 12 requests through the orchestrator...
+
+┌─────────┬─────────────────────────────────────────────┬───────────────────┬───────────┬─────────────┬──────────────┬─────────────┐
+│ (index) │ prompt                                      │ endpoint          │ latencyMs │ cost        │ baselineCost │ savings     │
+├─────────┼─────────────────────────────────────────────┼───────────────────┼───────────┼─────────────┼──────────────┼─────────────┤
+│ 0       │ 'Say hi in one word.'                       │ 'sim-cloud-fast'  │ 62        │ '$0.000003' │ '$0.000130'  │ '$0.000127' │
+│ 1       │ 'Summarize the plot of a short story abou…' │ 'sim-cloud-fast'  │ 62        │ '$0.000043' │ '$0.002160'  │ '$0.002117' │
+│ 2       │ "What's 12 * 7?"                            │ 'local-tinyllama' │ 63        │ '$0.000000' │ '$0.000120'  │ '$0.000120' │
+│ 3       │ 'Write a detailed technical explanation o…' │ 'local-llama3-8b' │ 62        │ '$0.000000' │ '$0.006350'  │ '$0.006350' │
+│ 4       │ "Translate 'good morning' to French."       │ 'sim-cloud-fast'  │ 64        │ '$0.000005' │ '$0.000250'  │ '$0.000245' │
+│ 5       │ 'Draft a professional email declining a m…' │ 'sim-cloud-fast'  │ 50        │ '$0.000033' │ '$0.001640'  │ '$0.001607' │
+│ 6       │ 'Explain the CAP theorem to a junior engi…' │ 'sim-cloud-fast'  │ 64        │ '$0.000083' │ '$0.004160'  │ '$0.004077' │
+│ 7       │ "List 5 synonyms for 'happy'."              │ 'sim-cloud-fast'  │ 64        │ '$0.000009' │ '$0.000470'  │ '$0.000461' │
+│ 8       │ 'Generate a haiku about autumn.'            │ 'sim-cloud-fast'  │ 61        │ '$0.000010' │ '$0.000480'  │ '$0.000470' │
+│ 9       │ 'Review this SQL query for injection risk…' │ 'local-llama3-8b' │ 63        │ '$0.000000' │ '$0.003230'  │ '$0.003230' │
+│ 10      │ "What's the capital of Peru?"               │ 'local-tinyllama' │ 64        │ '$0.000000' │ '$0.000150'  │ '$0.000150' │
+│ 11      │ 'Compare REST and gRPC for an internal mi…' │ 'local-llama3-8b' │ 65        │ '$0.000000' │ '$0.005180'  │ '$0.005180' │
+└─────────┴─────────────────────────────────────────────┴───────────────────┴───────────┴─────────────┴──────────────┴─────────────┘
+
+--- Summary ---
+Total requests:        12
+Total cost (routed):   $0.000186
+Total cost (baseline): $0.024320  (always sim-cloud-premium)
+Total savings:         $0.024134  (99.2%)
+Avg latency:           62ms
+Routing distribution:  {
+  "sim-cloud-fast": 7,
+  "local-tinyllama": 2,
+  "local-llama3-8b": 3
+}
+
+Summary written to D:\Hackathons2026\inference-orchestrator\logs\demo-summary.json
+Full per-request log: D:\Hackathons2026\inference-orchestrator\logs\routing-log.jsonl
